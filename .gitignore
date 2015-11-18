@@ -1,0 +1,14 @@
+**/target/
+**/**/target/
+/.settings/
+**/.settings/
+**/**/.settings/
+**/.classpath
+**/**/.classpath
+**/src/main/generated/
+**/**/bin
+**/bin
+#intellij
+*.iml
+.idea/
+/out/

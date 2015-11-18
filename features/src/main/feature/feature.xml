@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
+
+    <feature name="interceptorTest" description='${project.name}' version='${project.version}'>
+        <details>${project.description}</details>
+
+        <feature version="1.3.0" dependency="false" >transaction</feature>
+
+        <bundle>mvn:org.broken/interceptor/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:org.broken/mandatory-service/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:org.broken/required-service/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:org.broken/command/1.0-SNAPSHOT</bundle>
+    </feature>
+
+</features>
