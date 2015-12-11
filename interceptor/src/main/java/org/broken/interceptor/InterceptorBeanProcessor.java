@@ -38,6 +38,9 @@ public class InterceptorBeanProcessor implements BeanProcessor {
 
 	@Override
 	public Object beforeInit(Object bean, String beanName, BeanCreator beanCreator, BeanMetadata beanData) {
+		if (bean instanceof Processor) {
+            		return bean;
+        	}
 		List<Interceptor> interceptors = cdr.getInterceptors(beanData);
 		LOGGER.info("bean: " + beanName + " already has following interceptors: ");
 		for (Interceptor interceptor : interceptors) {
